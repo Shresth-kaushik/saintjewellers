@@ -32,7 +32,6 @@ import {
   Instagram,
   Twitter,
   LinkedIn,
-  Chat as ChatIcon,
   Menu as MenuIcon,
   Call as CallIcon,
   CallEnd as CallEndIcon,
@@ -104,7 +103,7 @@ export default function GaiBeach() {
     disableHysteresis: true,
     threshold: 100,
   });
-  const [chatActive, setChatActive] = useState(false);
+  // const [chatActive, setChatActive] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // Retell event listeners
@@ -179,35 +178,29 @@ export default function GaiBeach() {
   }, [userDetails]);
 
   // Programmatically open/close Voiceflow chat
-  useEffect(() => {
-    // Simple toggle function that waits for Voiceflow to be ready
-    const toggleChat = () => {
-      if (typeof window !== "undefined" && window.voiceflow && window.voiceflow.chat) {
-        if (chatActive) {
-          window.voiceflow.chat.open();
-        } else {
-          window.voiceflow.chat.close();
-        }
-        return true;
-      }
-      return false;
-    };
-
-    // Try to toggle immediately
-    if (!toggleChat()) {
-      // If not ready, retry a few times
-      const intervalId = setInterval(() => {
-        if (toggleChat()) {
-          clearInterval(intervalId);
-        }
-      }, 500);
-
-      // Clear interval after 5 seconds max
-      setTimeout(() => clearInterval(intervalId), 5000);
-
-      return () => clearInterval(intervalId);
-    }
-  }, [chatActive]);
+  // (Removed: no chat toggle UI in current design)
+  // useEffect(() => {
+  //   const toggleChat = () => {
+  //     if (typeof window !== "undefined" && window.voiceflow && window.voiceflow.chat) {
+  //       if (chatActive) {
+  //         window.voiceflow.chat.open();
+  //       } else {
+  //         window.voiceflow.chat.close();
+  //       }
+  //       return true;
+  //     }
+  //     return false;
+  //   };
+  //   if (!toggleChat()) {
+  //     const intervalId = setInterval(() => {
+  //       if (toggleChat()) {
+  //         clearInterval(intervalId);
+  //       }
+  //     }, 500);
+  //     setTimeout(() => clearInterval(intervalId), 5000);
+  //     return () => clearInterval(intervalId);
+  //   }
+  // }, [chatActive]);
 
   // Force-hide any Retell floating widget or button so it never appears
   useEffect(() => {
@@ -566,7 +559,7 @@ export default function GaiBeach() {
                   borderRadius: "50%",
                   background: "linear-gradient(45deg, #C6A662, #9f874e, #C6A662)",
                   backgroundSize: "200% 200%",
-                  animation: callStatus === "active" ? "rotate 2s linear infinite" : "none",
+                  animation: callStatus === "active" ? `${rotate} 2s linear infinite` : "none",
                   zIndex: -1,
                 },
               }}
