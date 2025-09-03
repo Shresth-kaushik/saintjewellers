@@ -251,7 +251,7 @@ export default function GaiBeach() {
   };
 
   const initiateConversation = async () => {
-    const agentId = "agent_b6e829ae1d617cef82d5e94504";
+    const agentId = "agent_b68ec5c4600426340bc2c249c6";
     try {
       const registerCallResponse = await registerCall(agentId);
       const accessToken = registerCallResponse.access_token;
@@ -272,7 +272,7 @@ export default function GaiBeach() {
   };
 
   async function registerCall(agentId: string): Promise<RegisterCallResponse> {
-    const apiKey = "key_6d2f13875c4b0cdb80c6f031c6c4";
+    const apiKey = "key_647b9646e7d88f601257a8cdf624";
     const sampleRate = 16000;
 
     try {
