@@ -899,7 +899,7 @@ export default function GaiBeach() {
                 Consultations by appointment
               </Typography>
               <Typography variant="body1" sx={{ mb: 1 }}>
-                Email: <Link href="mailto:contact@saintjeweller.com">contact@saintjeweller.com</Link>
+                Email: <Link href="mailto:info@saintjewellers.co.uk"> info@saintjewellers.co.uk</Link>
               </Typography>
               <Typography variant="body1" sx={{ mb: 2 }}>
                 Instagram: <Link href="https://www.instagram.com/saintjeweller?igsh=djRoamVlNzFycHlz" target="_blank" rel="noreferrer">@saintjeweller</Link>
