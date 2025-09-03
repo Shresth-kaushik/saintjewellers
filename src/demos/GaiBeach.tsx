@@ -317,7 +317,7 @@ export default function GaiBeach() {
     { label: "ENGAGEMENT", href: "#engagement" },
     { label: "CUSTOM DESIGN", href: "#custom" },
     { label: "OUR STORY", href: "#our-story" },
-    { label: "STORES", href: "#stores" },
+    // { label: "STORES", href: "#stores" },
     { label: "CONTACT", href: "#contact" },
   ];
 
@@ -850,7 +850,7 @@ export default function GaiBeach() {
         </Container>
       </Box>
 
-      {/* Our Stores (expanded, placed under Our Story) */}
+      {/* Our Stores (expanded, placed under Our Story)
       <Box id="stores" sx={{ py: { xs: 8, md: 10 }, px: 2, bgcolor: "background.default", scrollMarginTop: "96px" }}>
         <Container maxWidth="lg">
           <Typography variant="h3" sx={{ textAlign: "center", fontWeight: 700, letterSpacing: 1 }} gutterBottom>
@@ -878,7 +878,7 @@ export default function GaiBeach() {
             </Grid>
           </Grid>
         </Container>
-      </Box>
+      </Box> */}
 
       {/* Contact */}
       <Box id="contact" sx={{ py: { xs: 8, md: 10 }, px: 2, bgcolor: "background.default", scrollMarginTop: "96px" }}>
