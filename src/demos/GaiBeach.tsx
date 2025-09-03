@@ -365,7 +365,7 @@ export default function GaiBeach() {
       >
         <Toolbar sx={{ width: "100%", px: { xs: 1, md: 2 }, pr: { md: 3 }, justifyContent: "space-between" }}>
           <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-            <img src="/logo.png" alt="Saint Jeweller" style={{ height: 40 }} />
+            <img src="/logo.jpg" alt="Saint Jeweller" style={{ height: 40 }} />
             <Typography
               variant="h6"
               sx={{
@@ -374,7 +374,7 @@ export default function GaiBeach() {
                 color: trigger ? "text.primary" : "white",
               }}
             >
-              SAINT JEWELLER
+              SJ
             </Typography>
           </Box>
           <Box
